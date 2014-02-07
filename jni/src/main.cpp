@@ -27,8 +27,10 @@ using namespace Eigen;
 using namespace glw;
 
 
-#define WINWIDTH 640
-#define WINHEIGHT 480
+//#define WINWIDTH 800
+//#define WINHEIGHT 1280
+#define WINWIDTH 1280
+#define WINHEIGHT 800
 
 
 #define TREEDEBUG 0
@@ -243,7 +245,8 @@ int main(int argc, char * argv[])
 //    SDL_GLContext glcontext = SDL_GL_CreateContext(window);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_ES);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 2);
-    auto window = SDL_CreateWindow("SDL 2.0 OSX Tutorial", 0, 0, WINWIDTH, WINHEIGHT, SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN);
+    auto window = SDL_CreateWindow("SDL 2.0 Android Tutorial", 0, 0, WINWIDTH, WINHEIGHT, SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN);
+    //auto window = SDL_CreateWindow("SDL 2.0 Android Tutorial", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 512, 512, SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN);
 
     if (window == 0)
     {
