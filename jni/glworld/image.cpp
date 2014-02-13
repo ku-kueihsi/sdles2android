@@ -2,7 +2,7 @@
 #include "data_utils.h"
 //#include "platform_log.h"
 #include <assert.h>
-#include <png.h>
+#include <libpng16/png.h>
 #include <string.h>
 #include <stdlib.h>
 #include <iostream>

@@ -27,10 +27,10 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := main
 LOCAL_C_INCLUDES += ../
 LOCAL_C_INCLUDES += ../glworld/
-LOCAL_CFLAGS    := -Wall -Wextra -O2
-LOCAL_CFLAGS    += -march=armv7-a -mfloat-abi=softfp -mfpu=vfp -ffunction-sections -funwind-tables -fstack-protector -fno-short-enums -DANDROID -Wa,--noexecstack -std=c99 -mtune=cortex-a9 -march=armv7-a -mhard-float -mfloat-abi=softfp -mfpu=vfpv3-d16 -g -g -gdwarf-2 -marm -O0 -fno-omit-frame-pointer -Wall -W -D_REENTRANT -fPIE -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
-LOCAL_CPPFLAGS  += -std=c++11 -O2
-LOCAL_CPPFLAGS  += -march=armv7-a -mfloat-abi=softfp -mfpu=vfp -ffunction-sections -funwind-tables -fstack-protector -fno-short-enums -DANDROID -Wa,--noexecstack -std=c++11 -mtune=cortex-a9 -march=armv7-a -mhard-float -mfloat-abi=softfp -mfpu=vfpv3-d16 -g -g -gdwarf-2 -marm -O0 -fno-omit-frame-pointer -Wall -W -D_REENTRANT -fPIE -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
+LOCAL_CFLAGS    := -Wall -Wextra -O2 -std=c99
+LOCAL_CFLAGS    += -mtune=cortex-a9 -march=armv7-a -mhard-float -mfloat-abi=softfp -mfpu=vfpv3-d16 -ffunction-sections -funwind-tables -fstack-protector -fno-short-enums -DANDROID -Wa,--noexecstack -gdwarf-2 -marm -fno-omit-frame-pointer -Wall -W -D_REENTRANT -fPIE
+LOCAL_CPPFLAGS  += -O2 -std=c++11
+LOCAL_CPPFLAGS  += -mtune=cortex-a9 -march=armv7-a -mhard-float -mfloat-abi=softfp -mfpu=vfpv3-d16 -ffunction-sections -funwind-tables -fstack-protector -fno-short-enums -DANDROID -Wa,--noexecstack -gdwarf-2 -marm -fno-omit-frame-pointer -Wall -W -D_REENTRANT -fPIE
 LOCAL_SRC_FILES := SDL_android_main.c main.cpp 
 LOCAL_SRC_FILES += ../glworld/data_utils.cpp ../glworld/gl_tools.cpp ../glworld/image.cpp ../glworld/mesh.cpp ../glworld/virtualworld.cpp
 
